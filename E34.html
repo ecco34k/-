@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fault</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: relative;
+            animation: floatUpAndDown 3s ease-in-out infinite, flicker 0.1s linear infinite;
+        }
+
+        @keyframes floatUpAndDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            20% { opacity: 0.4; }
+            40% { opacity: 1; }
+            60% { opacity: 0.5; }
+            80% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1133324792129400873/1325031664119975947/3c.gif?ex=677a4f66&is=6778fde6&hm=3167cedc4d615fef01fb941893acf38a2c711fb08bc17d8426f082b8f16f31a0&=" alt="Animated GIF">
+    </div>
+</body>
+</html>
